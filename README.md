@@ -1,4 +1,4 @@
-# qk_main
+# micro_main
 
 ## Project setup
 ```

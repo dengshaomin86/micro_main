@@ -2,11 +2,27 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <a @click="openMicro">micro_01</a>
     </div>
-    <router-view/>
+    <div id="micro_container"></div>
+    <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'app',
+  data() {
+    return {};
+  },
+  methods: {
+    openMicro() {
+      const route = '/micro_01';
+      history.pushState(null, route, route); // 没引入路由，所以不能用路由切换
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
